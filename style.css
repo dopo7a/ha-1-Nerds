@@ -1,0 +1,9 @@
+X body {
+  background-color: beige;
+}
+
+.grid label::after,
+.features label::after {
+  content: "";
+  display: block;
+}

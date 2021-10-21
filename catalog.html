@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<!-- <html lang="en-us"> -->
+<html lang="ru-ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <meta name="keywords" content="different, key, words" -->
+  <!-- <meta name="description" content="This page annotation for search engines" -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>Nerds</title>
+</head>
+
+<body>
+  <h1 class="visually-hidden">Дизайн-студия Нёдз - Магазин</h1>
+
+  <header>
+    <nav class="main-nav">
+      <h2 class="visually-hidden">Главная навигация по сайту</h2>
+      <ul>
+        <li><a href="index.html"><img src="Img/nerds-logo.svg" alt="Логотип Нёдз"></a></li>
+        <li><a href="#">Студия</a></li>
+        <li><a href="#">Клиенты</a></li>
+        <li><a class="current">Магазин</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">Корзина</a></li>
+      </ul>
+    </nav>
+
+    <p class="title">Магазин готовых шаблонов</p>
+  </header>
+  <main class="catalog">
+
+    <section class="filters">
+      <h2 class="visually-hidden">Фильтры выбора товаров</h2>
+      <form action="">
+        <div class="cost">
+          <p class="title">Стоимость</p>
+          <input type="range" name="cost" id="cost" min="0" max="100 000" value="15 000">
+          <p class="range">
+            от
+            <input type="number" name="from" id="from" value="0">
+            до
+            <input type="number" name="to" id="to" value="15000">
+          </p>
+        </div>
+        <div class="grid">
+          <p class="title">Сетка</p>
+          <input type="radio" name="grid" id="adaptive" checked>
+          <label for="adaptive">Адаптивная</label>
+          <input type="radio" name="grid" id="fixed">
+          <label for="fixed">Фиксированная</label>
+          <input type="radio" name="grid" id="rubber">
+          <label for="rubber">Резиновая</label>
+        </div>
+        <div class="features">
+          <p class="title">Особенности</p>
+          <input type="checkbox" name="slider" id="slider" checked>
+          <label for="slider">Слайдер</label>
+          <input type="checkbox" name="advantages" id="advantages">
+          <label for="advantages">Блок преимуществ</label>
+          <input type="checkbox" name="news" id="news" checked>
+          <label for="news">Новости</label>
+          <input type="checkbox" name="galary" id="galary">
+          <label for="galary">Галерея</label>
+          <input type="checkbox" name="cart" id="cart">
+          <label for="cart">Корзина</label>
+        </div>
+        <button type="submit">Показать</button>
+      </form>
+    </section>
+
+    <section class="products">
+      <h2 class="visually-hidden">Блок выбранных товаров</h2>
+
+      <div class="sorting">
+        <h3 class="visually-hidden">Сортировка выбранных товаров</h3>
+        <p class="title">Сортировать:</p>
+        <ul>
+          <li class="current"><button>По цене</button></li>
+          <li><button>По типу</button></li>
+          <li><button>По названию</button></li>
+        </ul>
+        <h3 class="visually-hidden">Направление сортировки</h3>
+        <ul>
+          <li class="current"><button><span class="visually-hidden">Прямая сортировка</span><img src="Img/icon-down-dir.svg" alt="Вниз"></button></li>
+          <li><button><span class="visually-hidden">Обратная сортировка</span><img src="Img/icon-up-dir.svg" alt="Вверх"></button></li>
+        </ul>
+      </div>
+
+      <div class="cards">
+        <h3 class="visually-hidden">Готовые шаблоны</h3>
+        <section class="card">
+          <h4></h4>
+          <header></header>
+          <figure></figure>
+          <div class="hover-hidden"></div>
+        </section>
+      </div>
+
+      <div class="pagination">
+        <h3 class="visually-hidden">Выбрать страницу</h3>
+        <ul>
+          <li class="current"><button>1</button></li>
+          <li><button>2</button></li>
+          <li><button>3</button></li>
+          <li><button>Следующая</button></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <h2 class="visually-hidden">Подвал сайта</h2>
+
+    <section class="map">
+      <h3 class="visually-hidden">Карта и контакты</h3>
+      <img src="Img/map.png" alt="Мы на карте города">
+    </section>
+
+    <section class="socials">
+      <h3 class="visually-hidden">Мы в социальных сетях</h3>
+      <a><img src="Img/vk-icon.svg" alt="Вконтакте"></a>
+      <a><img src="Img/fb-icon.svg" alt="Фэйсбук"></a>
+      <a><img src="Img/insta-icon.svg" alt="Инстаграм"></a>
+      <p class="slogan">Давайте дружить, это выгодно!</p>
+      <p class="discount">Скидка 10% для друзей из социальных сетей.</p>
+    </section>
+
+  </footer>
+
+  <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
