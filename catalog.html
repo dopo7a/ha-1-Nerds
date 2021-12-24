@@ -10,125 +10,147 @@
   <!-- <meta name="description" content="This page annotation for search engines" -->
   <link rel="stylesheet" href="style.css">
 
-  <title>Nerds</title>
+  <title>Nerds-catalog</title>
 </head>
 
 <body>
   <h1 class="visually-hidden">Дизайн-студия Нёдз - Магазин</h1>
 
   <header>
-    <nav class="main-nav">
-      <h2 class="visually-hidden">Главная навигация по сайту</h2>
+    <nav class="site-nav">
+      <h2 class="visually-hidden">Навигация по сайту</h2>
       <ul>
-        <li><a href="index.html"><img src="Img/nerds-logo.svg" alt="Логотип Нёдз"></a></li>
+        <li>
+          <a href="index.html" class="site-nav-cur">
+            <img src="Img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёдз" /></a>
+        </li>
         <li><a href="#">Студия</a></li>
         <li><a href="#">Клиенты</a></li>
-        <li><a class="current">Магазин</a></li>
+        <li><a class="site-nav-cur">Магазин</a></li>
         <li><a href="#">Контакты</a></li>
         <li><a href="#">Корзина</a></li>
       </ul>
     </nav>
 
-    <p class="title">Магазин готовых шаблонов</p>
+    <h1>Магазин готовых шаблонов</h1>
   </header>
+
   <main class="catalog">
 
     <section class="filters">
-      <h2 class="visually-hidden">Фильтры выбора товаров</h2>
-      <form action="">
-        <div class="cost">
-          <p class="title">Стоимость</p>
-          <input type="range" name="cost" id="cost" min="0" max="100 000" value="15 000">
-          <p class="range">
-            от
-            <input type="number" name="from" id="from" value="0">
-            до
-            <input type="number" name="to" id="to" value="15000">
-          </p>
-        </div>
-        <div class="grid">
-          <p class="title">Сетка</p>
-          <input type="radio" name="grid" id="adaptive" checked>
-          <label for="adaptive">Адаптивная</label>
-          <input type="radio" name="grid" id="fixed">
-          <label for="fixed">Фиксированная</label>
-          <input type="radio" name="grid" id="rubber">
-          <label for="rubber">Резиновая</label>
-        </div>
-        <div class="features">
-          <p class="title">Особенности</p>
-          <input type="checkbox" name="slider" id="slider" checked>
-          <label for="slider">Слайдер</label>
-          <input type="checkbox" name="advantages" id="advantages">
-          <label for="advantages">Блок преимуществ</label>
-          <input type="checkbox" name="news" id="news" checked>
-          <label for="news">Новости</label>
-          <input type="checkbox" name="galary" id="galary">
-          <label for="galary">Галерея</label>
-          <input type="checkbox" name="cart" id="cart">
-          <label for="cart">Корзина</label>
-        </div>
-        <button type="submit">Показать</button>
+      <h2 class="visually-hidden">Фильтры товаров</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="filter-cost">
+          <legend class="title">Стоимость</legend>
+          <label class="visually-hidden" for="cost-range">Диапазон цен</label>
+          <input type="range" name="costRange" id="cost-range" min="0" max="100000" value="15000">
+          <!-- replace the next br with CSS -->
+          <br>
+          <label for="cost-from">от</label>
+          <input type="number" name="costFrom" id="cost-from" value="0">
+          <label for="cost-to">от</label>
+          <input type="number" name="costTo" id="cost-to" value="15000">
+          
+        </fieldset>
+        <fieldset class="filter-grid">
+          <legend class="title">Сетка</legend>
+          <input type="radio" name="filterGrid" id="grid-adaptive" checked>
+          <label for="grid-adaptive">Адаптивная</label>
+          <input type="radio" name="filterGrid" id="grid-fixed">
+          <label for="grid-fixed">Фиксированная</label>
+          <input type="radio" name="filterGrid" id="grid-rubber">
+          <label for="grid-rubber">Резиновая</label>
+        </fieldset>
+        <fieldset class="filter-features">
+          <legend class="title">Особенности</legend>
+          <input type="checkbox" name="filterSlider" id="filter-slider" checked>
+          <label for="filter-slider">Слайдер</label>
+          <input type="checkbox" name="filterAdvantages" id="filter-advantages">
+          <label for="filter-advantages">Блок преимуществ</label>
+          <input type="checkbox" name="filterNews" id="filter-news" checked>
+          <label for="filter-news">Новости</label>
+          <input type="checkbox" name="filterGalary" id="filter-galary">
+          <label for="filter-galary">Галерея</label>
+          <input type="checkbox" name="filterCart" id="filter-cart">
+          <label for="filter-cart">Корзина</label>
+        </fieldset>
+        <button class="button" type="submit">Показать</button>
       </form>
     </section>
 
-    <section class="products">
-      <h2 class="visually-hidden">Блок выбранных товаров</h2>
-
-      <div class="sorting">
-        <h3 class="visually-hidden">Сортировка выбранных товаров</h3>
-        <p class="title">Сортировать:</p>
-        <ul>
-          <li class="current"><button>По цене</button></li>
-          <li><button>По типу</button></li>
-          <li><button>По названию</button></li>
-        </ul>
-        <h3 class="visually-hidden">Направление сортировки</h3>
-        <ul>
-          <li class="current"><button><span class="visually-hidden">Прямая сортировка</span><img src="Img/icon-down-dir.svg" alt="Вниз"></button></li>
-          <li><button><span class="visually-hidden">Обратная сортировка</span><img src="Img/icon-up-dir.svg" alt="Вверх"></button></li>
-        </ul>
-      </div>
-
-      <div class="cards">
-        <h3 class="visually-hidden">Готовые шаблоны</h3>
-        <section class="card">
-          <h4></h4>
-          <header></header>
-          <figure></figure>
-          <div class="hover-hidden"></div>
-        </section>
-      </div>
-
-      <div class="pagination">
-        <h3 class="visually-hidden">Выбрать страницу</h3>
-        <ul>
-          <li class="current"><button>1</button></li>
-          <li><button>2</button></li>
-          <li><button>3</button></li>
-          <li><button>Следующая</button></li>
-        </ul>
-      </div>
+    <section class="sorting">
+      <h2 class="title">Сортировать:</h2>
+      <ul>
+        <li class="current"><button type="button">По цене</button></li>
+        <li><button type="button">По типу</button></li>
+        <li><button type="button">По названию</button></li>
+      </ul>
+      <ul>
+        <!-- move the following imgs to bg with CSS -->
+        <li class="current"><button type="button"><span class="visually-hidden">Прямая сортировка</span><img src="Img/icon-down-dir.svg" alt="Вниз"></button></li>
+        <li><button type="button"><span class="visually-hidden">Обратная сортировка</span><img src="Img/icon-up-dir.svg" alt="Вверх"></button></li>
+      </ul>
     </section>
 
+    <section class="products">
+      <h2 class="visually-hidden">Список готовых шаблонов</h2>
+      <ul>
+
+        <li class="product">
+          <header></header>
+          <figure>Figure</figure>
+          <footer class="hover-hidden">
+            <h3 class="card-title">Title</h3>
+            <p class="card-desc">Desc</p>
+            <button class="card-buy">Buy</button>
+          </footer>
+        </li>
+
+      </ul>
+    </section>
+
+    <nav class="pagination">
+      <h2 class="visually-hidden">Страницы списка</h2>
+      <ul>
+        <li class="current">1</li>
+        <li><button class="button">2</button></li>
+        <li><button class="button">3</button></li>
+        <li><button class="button">Следующая</button></li>
+      </ul>
+    </nav>
   </main>
+
   <footer>
-    <h2 class="visually-hidden">Подвал сайта</h2>
+    <!-- <h2 class="visually-hidden">Подвал сайта</h2> -->
 
     <section class="map">
-      <h3 class="visually-hidden">Карта и контакты</h3>
-      <img src="Img/map.png" alt="Мы на карте города">
+      <h2 class="visually-hidden">Карта и контакты</h2>
+      <img src="Pix/map.png" alt="Мы на карте города" />
+      <section>
+        <!-- replace this section element with the address one -->
+        <h3>Nёrds design studio</h3>
+        <p>
+          191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        </p>
+        <p>
+          тел. +7 (812) 275-75-75
+        </p>
+        <a href="#" class="button">Напишите нам</a>
+      </section>
     </section>
 
     <section class="socials">
-      <h3 class="visually-hidden">Мы в социальных сетях</h3>
-      <a><img src="Img/vk-icon.svg" alt="Вконтакте"></a>
-      <a><img src="Img/fb-icon.svg" alt="Фэйсбук"></a>
-      <a><img src="Img/insta-icon.svg" alt="Инстаграм"></a>
-      <p class="slogan">Давайте дружить, это выгодно!</p>
+      <!-- <h2 class="visually-hidden">Мы в социальных сетях</h2> -->
+      <h2 class="slogan">Давайте дружить, это выгодно!</h2>
       <p class="discount">Скидка 10% для друзей из социальных сетей.</p>
+      <!-- float the followings to the left -->
+      <!-- move the images to CSS, bg -->
+      <ul>
+        <li><a class="social-button "><img src="Img/vk-icon.svg" alt="" />Вконтакте</a></li>
+        <li><a class="social-button "><img src="Img/fb-icon.svg" alt="" />Фэйсбук</a></li>
+        <li><a class="social-button "><img src="Img/insta-icon.svg" alt="" />Инстаграм</a></li>
+      </ul>
     </section>
-
   </footer>
 
   <!-- <script src="script.js"></script> -->
